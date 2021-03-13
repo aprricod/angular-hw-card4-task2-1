@@ -1,0 +1,35 @@
+<!-- <div>
+  <ul>
+    <li>{{ user1.name | json }}</li>
+    <li>{{ user1.age | json }}</li>
+  </ul>
+</div>
+<br />
+<div>
+  <ul>
+    <li>{{ user2.name | uppercase }}</li>
+    <li>{{ user2.age | json }}</li>
+  </ul>
+</div>
+<br />
+<div>
+  <ul>
+    <li>{{ user3.name | json }}</li>
+    <li>{{ user3.age | json }}</li>
+  </ul>
+</div> -->
+
+<div>
+  <input type="text" [(ngModel)]="searchStr" />
+  <br />
+  <label class="active" for="first_name2">Поиск по имени</label>
+</div>
+<br />
+<div>
+  <ul>
+    <li *ngFor="let name of userName | search:searchStr">
+      {{ name | uppercase }}
+    </li>
+    <!-- <li *ngFor="let age of userAge">{{ age }}</li> -->
+  </ul>
+</div>
